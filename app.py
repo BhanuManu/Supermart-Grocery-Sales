@@ -6,14 +6,14 @@ from flask import Flask, request, jsonify, render_template
 import tensorflow as tf
 
 
-catenc = joblib.load("catenc.pkl")
-cityenc = joblib.load("cityenc.pkl")
-monthenc = joblib.load("monthenc.pkl")
-regenc = joblib.load("regenc.pkl")
-subenc = joblib.load("subenc.pkl")
-yrenc = joblib.load("yrenc.pkl")
-rfmodel=joblib.load("Random_Forest_Regression.pkl")
-ann = tf.keras.models.load_model("ann_model.keras")
+catenc = joblib.load("models/catenc.pkl")
+cityenc = joblib.load("models/cityenc.pkl")
+monthenc = joblib.load("models/monthenc.pkl")
+regenc = joblib.load("models/regenc.pkl")
+subenc = joblib.load("models/subenc.pkl")
+yrenc = joblib.load("models/yrenc.pkl")
+rfmodel=joblib.load("models/Random_Forest_Regression.pkl")
+ann = tf.keras.models.load_model("models/ann_model.keras")
 
 app = Flask(__name__)
 
